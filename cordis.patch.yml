@@ -1,0 +1,8 @@
+# dsh-latex-render-fix bundle patch.
+#
+# Inserts the guard into the profile's layer stack. It consumes no services: it
+# only needs to run before the host reports ready, so the window loads a
+# frontend bundle that already carries the LaTeX normalization.
+- insert:
+    - id: latex-render-fix
+      name: 'dsh-latex-render-fix'

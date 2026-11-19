@@ -1,0 +1,48 @@
+{
+  "name": "dsh-latex-render-fix",
+  "version": "0.1.0",
+  "description": "让 dsh 正确渲染 $$\\begin{aligned}…$$ 这类 LaTeX 写法：启动时自动给前端 bundle 打「解析前文本规范化」补丁，并随 dsh 升级自动重打。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "latex",
+    "katex",
+    "markdown",
+    "math"
+  ],
+  "author": "mizuki5101 <1220436354@qq.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mizuki5101/dsh-latex-render-fix.git"
+  },
+  "homepage": "https://github.com/mizuki5101/dsh-latex-render-fix#readme",
+  "bugs": {
+    "url": "https://github.com/mizuki5101/dsh-latex-render-fix/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
